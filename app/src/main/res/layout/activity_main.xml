@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titletext"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/height_text"
+        android:layout_width="113dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="44dp"
+        android:fontFamily="monospace"
+        android:text="Height"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/in_cm_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/in_cm_text"
+        android:layout_width="91dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="monospace"
+        android:text="(in CM)"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Height_in_cm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height_text" />
+
+    <Button
+        android:id="@+id/send_info_button"
+        android:layout_width="129dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="140dp"
+        android:text="Send Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Height_bar" />
+
+    <EditText
+        android:id="@+id/Height_in_cm"
+        android:layout_width="37dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="60dp"
+        android:editable="false"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="text"
+        android:text="0"
+        android:background="@null"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Height_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:boxBackgroundMode="none"                />
+
+    <SeekBar
+        android:id="@+id/Height_bar"
+        android:layout_width="429dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:scaleY="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Height_in_cm" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="115dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="154dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_2_eco" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
